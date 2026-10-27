@@ -1,0 +1,11 @@
+name: Compile and Run C
+on: [push]
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile C code
+        run: gcc -o my_program your_file.c  # 替换为你的C文件名
+      - name: Run program
+        run: ./my_program
